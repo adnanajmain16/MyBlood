@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register - Amar Rokto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+  <div class="app">
+    <!-- Header -->
+    <header>
+      <a class="brand" href="index.html">
+       <div class="logo">
+          <img src="Blood PIC.jpg" width="100px" height="100px">
+        </div>
+        <div>
+          <div style="font-weight:800">AMAR ROKTO</div>
+          <div style="font-size:12px;color:var(--muted)">রক্তদাতা খুঁজুন • যোগ দিন • শেয়ার করুন</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="login.html">Log In</a>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="panel">
+        <h2>Become a Donor</h2>
+        <p style="color:var(--muted);margin-top:4px">
+          ডোনার হতে নিচের ফর্মটি পূরণ করুন — ফোন + পাসওয়ার্ড দিয়ে অ্যাকাউন্ট হবে যাতে লগইন করে Dashboard দেখতে পারেন।
+        </p>
+
+        <!-- NOTE: onsubmit নাই, JS থেকে bind হবে -->
+        <form id="register-form">
+          <div class="row">
+            <div class="col">
+              <label for="r-name">নাম</label>
+              <input id="r-name" required type="text" placeholder="পূর্ণ নাম"/>
+            </div>
+            <div class="col">
+              <label for="r-phone">ফোন (01XXXXXXXXX)</label>
+              <input id="r-phone" required type="tel" placeholder="01XXXXXXXXX"/>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="r-blood">রক্তের গ্রুপ</label>
+              <select id="r-blood" required>
+                <option value="">-- নির্বাচন করুন --</option>
+                <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="r-last">শেষ রক্তদান (তারিখ)</label>
+              <input id="r-last" type="date" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="r-location">লোকেশন (City/Area)</label>
+              <input id="r-location" required type="text" placeholder="Dhaka"/>
+            </div>
+            <div class="col">
+              <label for="r-available">Availability</label>
+              <select id="r-available">
+                <option>Available</option>
+                <option>Busy / Not available</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="r-photo">Photo URL (optional)</label>
+          <input id="r-photo" type="url" placeholder="https://... (optional)"/>
+
+          <label for="r-pass">Account Password (for login)</label>
+          <input id="r-pass" type="password" required placeholder="নূন্যতম 6 অক্ষর"/>
+
+          <div style="display:flex;gap:8px;margin-top:6px;align-items:center">
+            <button class="btn primary" type="submit">Register & Create Account</button>
+            <button class="btn light" type="button" onclick="prefillRegister()">Quick Fill (Demo)</button>
+            <div id="reg-msg" style="margin-left:auto;color:var(--muted)"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      © <span id="yr"></span> AMAR ROKTO </footer>
+  </div>
+
+  <!-- Common JS -->
+  <script src="script.js"></script>
+</body>
+</html>

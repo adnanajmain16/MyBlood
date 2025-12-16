@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - Amar Rokto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+  <div class="app">
+    <header>
+      <a class="brand" href="index.html">
+        <div class="logo">
+           <div class="logo">
+          <img src="Blood PIC.jpg" width="100px" height="100px">
+        </div>
+        </div>
+        <div>
+          <div style="font-weight:800">AMAR ROKTO</div>
+          <div style="font-size:12px;color:var(--muted)">রক্তদাতা খুঁজুন • যোগ দিন • শেয়ার করুন</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="cta" onclick="logout()">Log Out</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2>Dashboard</h2>
+          <div style="display:flex;gap:8px;align-items:center">
+            <a class="btn light" href="index.html">Home</a>
+            <button class="btn primary" onclick="logout()">Log Out</button>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="profile">
+          <div class="avatar" id="dash-avatar">--</div>
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div>
+                <div id="dash-name" style="font-weight:800;font-size:18px">Name</div>
+                <div id="dash-blood" style="color:var(--muted)">Blood</div>
+              </div>
+              <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+                <div class="three-dot">
+                  <button id="threeBtn" class="btn light" type="button" onclick="toggleMenu()">⋯</button>
+                  <div id="threeMenu" class="menu" role="menu" aria-hidden="true">
+                    <button type="button" onclick="openEdit()">Edit Profile</button>
+                    <button type="button" onclick="shareProfile()">Share Profile</button>
+                    <button type="button" onclick="copyProfileLink()">Copy Profile Link</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:8px;color:var(--muted)" id="dash-phone">Phone</div>
+            <div style="margin-top:6px;color:var(--muted)" id="dash-loc">Location</div>
+            <div style="margin-top:6px;color:var(--muted)" id="dash-last">Last Donate</div>
+          </div>
+        </div>
+
+        <!-- edit modal -->
+        <div id="editModal" style="display:none;margin-top:12px" class="panel">
+          <h3>Edit Profile</h3>
+          <form id="edit-form" onsubmit="saveEdit(event)">
+            <div class="row">
+              <div class="col">
+                <label>Name</label>
+                <input id="e-name" type="text" required/>
+              </div>
+              <div class="col">
+                <label>Phone</label>
+                <input id="e-phone" type="tel" required/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label>Blood</label>
+                <select id="e-blood" required>
+                  <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                  <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+                </select>
+              </div>
+              <div class="col">
+                <label>Location</label>
+                <input id="e-loc" type="text" required/>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn primary" type="submit">Save</button>
+              <button class="btn light" type="button" onclick="closeEdit()">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>© <span id="yr"></span> AMAR ROKTO </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

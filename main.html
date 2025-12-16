@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amar Rokto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div class="app">
+    <header>
+      <a class="brand" href="index.html">
+        <div class="logo">
+          <img src="Blood PIC.jpg" width="100px" height="100px">
+        </div>
+        <div>
+          <div style="font-weight:800">AMAR ROKTO</div>
+          <div style="font-size:12px;color:var(--muted)">রক্তদাতা খুঁজুন • যোগ দিন • শেয়ার করুন</div>
+        </div>
+      </a>
+      <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="login.html">Log In</a>
+      </nav>
+    </header>
+
+    <main class="main-grid">
+      <div>
+        <!-- HERO + carousel -->
+        <section class="panel">
+          <div class="hero">
+            <div class="hero-text">
+              <h1>AMAR ROKTO</h1>
+              <p>রক্তদানের গুরুত্ব, দ্রুত ডোনার খুঁজে পাওয়া এবং নিজের প্রোফাইল শেয়ার করার সহজ উপায়।</p>
+              <div class="hero-actions">
+                <a class="btn primary" href="register.html">Become a Donor</a>
+                <a class="btn light" href="login.html">Log In</a>
+              </div>
+            </div>
+            <div style="flex:0 0 340px">
+              <div class="panel" style="padding:8px">
+                <div style="font-size:13px;color:var(--muted)">For Donors:</div>
+                <div class="carousel" aria-live="polite">
+                  <div class="slide visible" data-i="0" style="background:linear-gradient(135deg,#ff7b7b,#d90429);">
+                    <div class="overlay"></div>
+                    <div style="position:relative;z-index:1;text-align:center;padding:12px">
+                      <strong style="font-size:18px">Give Blood, Save Lives</strong>
+                      <div style="margin-top:6px;font-size:13px">একবার রক্ত দিলে কেউ বাঁচতে পারে</div>
+                    </div>
+                  </div>
+                  <div class="slide hidden" data-i="1" style="background:linear-gradient(135deg,#ffb199,#ff6b6b);">
+                    <div class="overlay"></div>
+                    <div style="position:relative;z-index:1;text-align:center;padding:12px">
+                      <strong style="font-size:18px">Your Small Act = Big Impact</strong>
+                      <div style="margin-top:6px;font-size:13px">স্থানীয় ডোনার খুঁজে পেতে সহজ</div>
+                    </div>
+                  </div>
+                  <div class="slide hidden" data-i="2" style="background:linear-gradient(135deg,#8ec5ff,#d90429);">
+                    <div class="overlay"></div>
+                    <div style="position:relative;z-index:1;text-align:center;padding:12px">
+                      <strong style="font-size:18px">Donate Regularly</strong>
+                      <div style="margin-top:6px;font-size:13px">রক্তদানের পূর্বের শর্ত জানতে সঠিক তথ্য রাখুন</div>
+                    </div>
+                  </div>
+                  <div class="dotbar">
+                    <div class="dot active" data-i="0" onclick="goToSlide(0)"></div>
+                    <div class="dot" data-i="1" onclick="goToSlide(1)"></div>
+                    <div class="dot" data-i="2" onclick="goToSlide(2)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- quick features -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px">
+            <div class="panel">
+              <h3 style="margin:0 0 8px 0">About Blood Donation</h3>
+              <p style="color:var(--muted);margin:0">রক্তদান একটি মহতী কাজ। প্রতি ডোনেশন বহু জীবন বাঁচাতে পারে — পর্যাপ্ত বিশ্রাম, সঠিক খাদ্য ও চিকিৎসকের পরামর্শ নিয়ে রক্তদান করা উচিত।</p>
+            </div>
+
+            <div class="panel">
+              <h3 style="margin:0 0 8px 0">Info</h3>
+              <p style="margin:0;color:var(--muted)">এই সিস্টেমটি ডেমো-ফ্রন্টএন্ড; ডেটা ব্রাউজারের localStorage-এ রাখা হয়।</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="panel">
+          <h2>About Us</h2>
+          <p style="color:var(--muted)">আমরা — AMAR ROKTO টিম। লক্ষ্য: দ্রুত এবং নির্ভরযোগ্যভাবে রক্তদাতা খুঁজে পাওয়া এবং দাতাদের প্রোফাইল ব্যবস্থাপনা সহজ করা।</p>
+          <ul style="margin-top:8px;color:var(--muted)">
+            <li>ডোনাররা নিজেই তাদের তথ্য আপডেট করবে।</li>
+            <li>প্রোফাইল সহজেই share করা যাবে।</li>
+            <li>ডেমোতে পাসওয়ার্ড localStorage-এ; প্রোডাকশনে backend + encryption লাগবে।</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="panel">
+          <h2>Contact Us</h2>
+          <p style="color:var(--muted)">আমাদের সাথে যোগাযোগ করুন:</p>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> +8801xxxxxxxxx</li>
+            <li><strong>WhatsApp:</strong> +8801xxxxxxxxx</li>
+            <li><strong>Facebook:</strong> fb.com/AmarRokto</li>
+            <li><strong>Email:</strong> supportAmarRokto@gmail.com</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" style="width:340px">
+        <div class="panel">
+          <h3 style="margin:0">Search Donor</h3>
+          <p style="color:var(--muted);margin:6px 0 0 0">দ্রুত খুঁজুন — phone দিয়ে লগইন করলে Dashboard পাবে।</p>
+          <div style="margin-top:8px" class="searchbar">
+            <select id="sblood">
+              <option value="">All</option>
+              <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+              <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+            </select>
+            <input id="sloc" placeholder="City/Area"/>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn primary" onclick="sideSearch()">Search</button>
+            <button class="btn light" onclick="loadAll()">All</button>
+          </div>
+          <div id="side-results" class="search-results" style="margin-top:10px"></div>
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <h4 style="margin:0">Quick Demo</h4>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn primary" onclick="seedDemo()">Load Demo</button>
+            <button class="btn light" onclick="clearData()">Clear</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>© <span id="yr"></span> AMAR ROKTO</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

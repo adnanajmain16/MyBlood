@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Log In - Amar Rokto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+  <div class="app">
+    <header>
+      <a class="brand" href="index.html">
+        <div class="logo">
+          <img src="Blood PIC.jpg" width="100px" height="100px">
+        </div>
+        <div>
+          <div style="font-weight:800">AMAR ROKTO</div>
+          <div style="font-size:12px;color:var(--muted)">রক্তদাতা খুঁজুন • যোগ দিন • শেয়ার করুন</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="active" href="login.html">Log In</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Log In</h2>
+        <p class="text-sm">অ্যাকাউন্টে ঢুকলে Dashboard দেখবে।</p>
+
+        <form id="login-form" style="margin-top:10px">
+          <label>Phone</label>
+          <input id="l-phone" required type="tel" placeholder="01XXXXXXXXX"/>
+
+          <label>Password</label>
+          <input id="l-pass" required type="password" placeholder="Password"/>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">
+            <a href="forgot_password.html" class="text-sm" style="text-decoration:none">Forgot password?</a>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+            <button class="btn primary" type="submit">Log In</button>
+            <a class="btn light" href="register.html" style="text-align:center;text-decoration:none">Create Account</a>
+            <div id="login-msg" style="margin-left:auto;color:var(--muted)"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>© <span id="yr"></span> AMAR ROKTO</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
